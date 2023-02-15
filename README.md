@@ -1,3 +1,3 @@
 # nodejs-app
-nodejs-app-to-sue-in-jenkins
+nodejs-app-to-use-in-jenkins
 
