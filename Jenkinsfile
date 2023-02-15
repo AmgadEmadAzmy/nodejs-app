@@ -5,7 +5,6 @@ pipeline {
         stage('ci') {
             steps {
                 // Get some code from a GitHub repository
-                git 'https://github.com/AmgadEmadAzmy/nodejs-app'
                 
                 withCredentials([usernamePassword(credentialsId: 'DockerHub-Cred', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
                 
