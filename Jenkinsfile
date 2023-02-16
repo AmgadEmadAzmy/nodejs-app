@@ -10,7 +10,7 @@ pipeline {
 
                 sh """
                     cd backend-app
-                    docker build . -t amgademad/app:v$BUILD_NUMBER
+                    docker build . -f dockerfile -t amgademad/app:v$BUILD_NUMBER
                     docker login -u ${USERNAME} -p ${PASSWORD}
                     docker push amgademad/app:v$BUILD_NUMBER
                     cd ..
