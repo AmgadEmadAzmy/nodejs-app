@@ -27,7 +27,6 @@ pipeline {
                         gcloud auth activate-service-account --key-file=${GCLOUD_CREDS}
                         apt-get install google-cloud-sdk-app-engine-java kubectl -y
                         gcloud container clusters get-credentials private-cluster --zone us-central1-a --project ace-tracker-375011
-                        sed -i 's/tag/${BUILD_NUMBER}/g' deployment.yaml
                         kubectl apply -f ./deployment.yaml
                     """
                 }
