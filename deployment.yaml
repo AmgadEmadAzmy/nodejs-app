@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
         - name: node-app-container
-          image: amgademad/app:v
+          image: amgademad/app:vtag
           ports:
             - name: http
               containerPort: 3000
