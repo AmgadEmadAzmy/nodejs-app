@@ -11,7 +11,7 @@ pipeline {
                 sh """
                     docker build . -f dockerfile -t amgademad/apps:v1
                     docker login -u ${USERNAME} -p ${PASSWORD}
-                    docker push amgademad/app:v$BUILD_NUMBER
+                    docker push amgademad/apps:v1
                 """
                 }
               }
