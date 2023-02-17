@@ -24,7 +24,7 @@ pipeline {
                     sh """
                         gcloud auth activate-service-account --key-file=${GCLOUD_CREDS}
                         gcloud container clusters get-credentials private-cluster --zone us-central1-a --project ace-tracker-375011
-                        kubectl apply -f ./deployment.yaml
+                        kubectl apply -n app -f /var/jenkins_home/workspace/ci-cd/deployment.yaml
                     """
                 }
             }
