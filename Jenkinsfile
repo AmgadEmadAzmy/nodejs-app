@@ -23,7 +23,6 @@ pipeline {
                 withCredentials([file(credentialsId: 'Service-Account-Cred', variable: 'GCLOUD_CREDS')]){
                     sh """
                         gcloud auth activate-service-account --key-file=${GCLOUD_CREDS}
-                        apt-get install google-cloud-sdk-app-engine-java kubectl -y
                         gcloud container clusters get-credentials private-cluster --zone us-central1-a --project ace-tracker-375011
                         kubectl apply -f ./deployment.yaml
                     """
